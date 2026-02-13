@@ -10,7 +10,7 @@ To run this, click on index.html. Make sure index.js is in the same folder. Make
 | Create **user interaction** with the API through a search feature, paginated gallery, or similar. This should use **GET requests** to retrieve associated data. | **15%** | TODO |
 | Enable **user manipulation** of data within the API through **POST, PUT, or PATCH** requests. Ensure your chosen API supports this before beginning. | **15%** | TODO |
 | Make use of **Promises and `async`/`await` syntax** as appropriate. | **15%** | TODO |
-| Organize your JavaScript code into **at least three (3) different module files**, and import functions and data across files as necessary. | **3%** | TODO |
+| Organize your JavaScript code into **at least three (3) different module files**, and import functions and data across files as necessary. | **3%** |  | COMPLETED
 | Ensure the program runs as expected, **without undesired behavior** caused by misunderstanding of the JavaScript event loop (such as race conditions, API calls handled out of order, etc.). | **5%** | TODO |
 | Create an **engaging user experience** through the use of HTML and CSS. | **5%** | TODO |
 | Ensure the program **runs without errors** (comment out things that do not work, and explain your blockers — you can still receive partial credit). | **10%** | TODO |
