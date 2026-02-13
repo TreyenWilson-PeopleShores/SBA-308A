@@ -26,7 +26,7 @@ document.getElementById("search-button").addEventListener("click", function(){
     let input = document.getElementById("search-box").value;
     console.log(input);
     for(let breed of allBreeds){ //change background to user pick
-        if (breed.name === input){
+        if (breed.name === input || breed.id === input || breed.alt_names === input){
             external3.setBackground(breed)
             break;
         }
