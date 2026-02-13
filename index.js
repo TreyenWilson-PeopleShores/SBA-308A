@@ -12,7 +12,7 @@ import * as external3 from "./external/external-3.js";
   });
   let breeds = await response.json()
   let allBreeds = breeds; 
-  console.log(allBreeds.length);
+  
 
 
 
@@ -25,4 +25,12 @@ external3.setBackground(randomCat)
 document.getElementById("search-button").addEventListener("click", function(){
     let input = document.getElementById("search-box").value;
     console.log(input);
+    for(let breed of allBreeds){ //change background to user pick
+        if (breed.name === input){
+            external3.setBackground(breed)
+            break;
+        }
+    }
 })
+
+console.log(allBreeds[6]);

@@ -18,7 +18,7 @@ export async function getCats(breed){
     } catch (error){
         console.log(error);
     }
-    console.log("CONNECTED")
+    //console.log("CONNECTED")
 }
 
 
