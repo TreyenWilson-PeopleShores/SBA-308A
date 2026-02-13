@@ -5,17 +5,20 @@ const API_KEY =
 // This file will be used to gather the pictures and put them into an array.
 
 
-export async function getCats(){
+export async function getCats(breed){
     try{
-        let responseImage = await fetch(`https://api.thecatapi.com/v1/images/${selectedBreed.reference_image_id}`, {
+        let responseImage = await fetch(`https://api.thecatapi.com/v1/images/${breed.reference_image_id}`, {
             headers: {
             "x-api-key": API_KEY,
         },
         });
         let image = await responseImage.json();
         let imageUrl = image.url;
+        console.log("External1:", imageUrl);
     } catch (error){
         console.log(error);
     }
     console.log("CONNECTED")
 }
+
+
