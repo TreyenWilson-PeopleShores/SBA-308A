@@ -1,0 +1,45 @@
+
+
+.images{
+    display: flex;
+}
+
+.image1{
+    margin-right: auto;
+}
+
+.image2{
+    margin-left: auto;
+}
+
+#nav-button{
+    color: rgb(47, 66, 37);
+
+}
+#nav-buttonn:hover{
+    background-color: rgb(89, 255, 0);
+}
+
+
+
+table, thead+tbody{
+    text-align: center;
+}
+
+label ~ input{
+    display: flex;
+    text-align: center;
+}
+
+
+
+
+
+input{
+    background-color: rgb(253, 253, 253);
+
+}
+
+
+
+/* . # > + , ~*/
