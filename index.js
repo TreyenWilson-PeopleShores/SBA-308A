@@ -11,9 +11,9 @@ import * as external2 from "./external/external-2.js";
   });
   let breeds = await response.json()
   let allBreeds = breeds; 
-  console.log(allBreeds);
+  console.log(allBreeds.length);
 
 
 external1.getCats(allBreeds[4]);
 
-external2.getRandomCat();
+console.log(external2.getRandomCat(allBreeds));
