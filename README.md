@@ -5,7 +5,7 @@ To run this, click on index.html. Make sure index.js is in the same folder. Make
 
 
 | Requirement | Weight | TODO | FINISHED | 
-|-------------|--------|
+|-------------|--------|--------|--------|
 | Use the **fetch API or Axios** to communicate with an external web API. Use the data to populate your application's content and features. | **20%** | TODO |
 | Create **user interaction** with the API through a search feature, paginated gallery, or similar. This should use **GET requests** to retrieve associated data. | **15%** | TODO |
 | Enable **user manipulation** of data within the API through **POST, PUT, or PATCH** requests. Ensure your chosen API supports this before beginning. | **15%** | TODO |
