@@ -21,3 +21,8 @@ let randomCat = external2.getRandomCat(allBreeds);
 
 external1.getCats(randomCat);
 external3.setBackground(randomCat)
+
+document.getElementById("search-button").addEventListener("click", function(){
+    let input = document.getElementById("search-box").value;
+    console.log(input);
+})
