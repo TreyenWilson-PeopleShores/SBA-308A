@@ -2,6 +2,10 @@
 
 To run this, click on index.html. Make sure index.js is in the same folder. Make sure you are connected to the internet. Run live server on VSCODE.
 
+This code first grabs a random cat image from the Cat API and sets it to the background. You are able to vote on it, with the YES or NO buttons. You are able to search for a cat, and it will give a list of cat names if you don't type out the full name. Once you enter a full cat name, it will set that cat as the background You can then vote on the cat.
+
+Index.js uses functions from external-1.js, external-2.js, and external-3.js files, each one is required. Make sure to run it in Edge, as that is what I developed the code in, make sure to be connected to the internet, as the CAT API requires internet connectivity to work. Specifically for the POST portion of the code, I had to use the DEMO KEY for the CAT API, as my own wouldn't allow it to POST to the api.
+
 
 
 | Requirement | Weight | TODO | FINISHED | 
@@ -11,12 +15,12 @@ To run this, click on index.html. Make sure index.js is in the same folder. Make
 | Enable **user manipulation** of data within the API through **POST, PUT, or PATCH** requests. Ensure your chosen API supports this before beginning. | **15%** |  | COMPLETED
 | Make use of **Promises and `async`/`await` syntax** as appropriate. | **15%** |  | COMPLETED
 | Organize your JavaScript code into **at least three (3) different module files**, and import functions and data across files as necessary. | **3%** |  | COMPLETED
-| Ensure the program runs as expected, **without undesired behavior** caused by misunderstanding of the JavaScript event loop (such as race conditions, API calls handled out of order, etc.). | **5%** | TODO |
-| Create an **engaging user experience** through the use of HTML and CSS. | **5%** | TODO |
-| Ensure the program **runs without errors** (comment out things that do not work, and explain your blockers — you can still receive partial credit). | **10%** | TODO |
-| **Commit frequently** to the git repository. | **5%** | TODO |
+| Ensure the program runs as expected, **without undesired behavior** caused by misunderstanding of the JavaScript event loop (such as race conditions, API calls handled out of order, etc.). | **5%** |  | COMPLETED
+| Create an **engaging user experience** through the use of HTML and CSS. | **5%** |  | COMPLETED
+| Ensure the program **runs without errors** (comment out things that do not work, and explain your blockers — you can still receive partial credit). | **10%** |  | COMPLETED
+| **Commit frequently** to the git repository. | **5%** |  | COMPLETED
 | Include a **README file** that contains a description of your application. | **2%** | TODO |
-| Level of effort displayed in **creativity, presentation, and user experience**. | **5%** | TODO |
+| Level of effort displayed in **creativity, presentation, and user experience**. | **5%** |  | COMPLETED
 
 
 ========

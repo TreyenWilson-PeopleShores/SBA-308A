@@ -48,7 +48,7 @@ async function voteBreed(breed, voteValue){
                 'content-type':"application/json",
                 'x-api-key': "DEMO-API-KEY"
                 // HAD TO USE DEMO KEY FOR VOTING, MY API KEY
-                // WOULDN'T WORK
+                // WOULDN'T WORK TO POST
             },
             body: JSON.stringify({
                 image_id: breed.reference_image_id,
@@ -67,6 +67,8 @@ let randomCat = external2.getRandomCat(allBreeds);
 let initialLoad = true
 external1.getCats(randomCat);
 external3.setBackground(randomCat)
+
+
 
 function checkForVote(breed){
     document.getElementById("nav-button-yes").addEventListener("click", function(){
