@@ -12,7 +12,7 @@ import * as external3 from "./external/external-3.js";
   });
   let breeds = await response.json()
   let allBreeds = breeds; 
-  
+  //console.log(allBreeds[3].reference_image_id);
 
 async function searchBreeds(input){ // this searchs through the breeds for the user input
     try{
@@ -39,7 +39,32 @@ async function searchBreeds(input){ // this searchs through the breeds for the u
     }
 }
 
+async function voteBreed(breed, voteValue){
+    try{
 
+        await fetch(`https://api.thecatapi.com/v1/votes/`, {
+            method: "POST",
+            headers: {
+                'content-type':"application/json",
+                'x-api-key': API_KEY
+            },
+            body: JSON.stringify({
+                breed_id: breed.reference_image_id,
+                value: voteValue,
+            }),
+        });
+        console.log("Body being sent:", JSON.stringify({
+            image_id: breed.reference_image_id,
+            value: voteValue
+        }));
+        console.log("https://api.thecatapi.com/v1/votes/")
+        
+    }catch(error){
+        console.log("Voting error:", error);
+    }
+}
+
+voteBreed(allBreeds[3], 1);
 let randomCat = external2.getRandomCat(allBreeds);
 
 external1.getCats(randomCat);
