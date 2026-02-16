@@ -14,14 +14,18 @@ import * as external3 from "./external/external-3.js";
   let allBreeds = breeds; 
   
 
-async function searchBreeds(){
+async function searchBreeds(input){ // this searchs through the breeds for the user input
     try{
-        let searchTerm = "Ab"
-        let searchName = fetch(`https://api.thecatapi.com/v1/breeds/search?q=${searchTerm}`, {
-            headers: { "x-api-key": API_KEY }
-        })
-        let searchResults = await searchName.json();
-        console.log("Test", searchResults);
+        let searchTerm = input;
+        let searchName = await fetch(`https://api.thecatapi.com/v1/breeds/search?q=${searchTerm}`, {
+            headers: {
+            "x-api-key": API_KEY,
+            },
+        });
+        let searchResults = await searchName.json()
+        let breedResults = searchResults; 
+
+        console.log(breedResults);
     }
     catch(error){
         console.log("An error has occured:", error);
@@ -37,12 +41,21 @@ external3.setBackground(randomCat)
 document.getElementById("search-button").addEventListener("click", function(){
     let input = document.getElementById("search-box").value;
     console.log(input);
+    let inputCorrect = false;
     for(let breed of allBreeds){ //change background to user pick
         if (breed.name === input || breed.id === input || breed.alt_names === input){
             external3.setBackground(breed)
             break;
         }
     }
+        if(inputCorrect === false){
+            console.log("HERE", input);
+            searchBreeds(input);
+        }
+    searchBreeds();
 })
 
 console.log(allBreeds[6]);
+
+
+
