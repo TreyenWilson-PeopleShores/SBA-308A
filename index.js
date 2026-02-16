@@ -24,7 +24,14 @@ async function searchBreeds(input){ // this searchs through the breeds for the u
         });
         let searchResults = await searchName.json()
         let breedResults = searchResults; 
-        document.getElementById("search-results").innerHTML = `<ul><li>${breedResults}</li></ul>`;        
+        document.getElementById("search-results").innerHTML = `<li>${breedResults[0]}</li>`;        
+        for(let breed of breedResults){
+            
+            //console.log("RESULT", breed);
+            document.getElementById("search-results").innerHTML += `<li>${breed.name}</li>`;
+            console.log("RESULT", breed.name);        
+
+        }
         console.log(breedResults);
     }
     catch(error){
@@ -52,7 +59,6 @@ document.getElementById("search-button").addEventListener("click", function(){
             console.log("HERE", input);
             searchBreeds(input);
         }
-    searchBreeds();
 })
 
 console.log(allBreeds[6]);
