@@ -6,7 +6,7 @@ This code first grabs a random cat image from the Cat API and sets it to the bac
 
 Index.js uses functions from external-1.js, external-2.js, and external-3.js files, each one is required. Make sure to run it in Edge, as that is what I developed the code in, make sure to be connected to the internet, as the CAT API requires internet connectivity to work. Specifically for the POST portion of the code, I had to use the DEMO KEY for the CAT API, as my own wouldn't allow it to POST to the api.
 
-
+========
 
 | Requirement | Weight | TODO | FINISHED | 
 |-------------|--------|--------|--------|
