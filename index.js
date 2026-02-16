@@ -55,18 +55,14 @@ async function voteBreed(breed, voteValue){
                 value: voteValue,
             }),
         });
-        console.log("Body being sent:", JSON.stringify({
-            image_id: breed.reference_image_id,
-            value: voteValue
-        }));
-        console.log("https://api.thecatapi.com/v1/votes/")
+
+       // console.log("https://api.thecatapi.com/v1/votes/")
         
     }catch(error){
         console.log("Voting error:", error);
     }
 }
 
-voteBreed(allBreeds[3], 1);
 let randomCat = external2.getRandomCat(allBreeds);
 let initialLoad = true
 external1.getCats(randomCat);
