@@ -19,7 +19,7 @@ Index.js uses functions from external-1.js, external-2.js, and external-3.js fil
 | Create an **engaging user experience** through the use of HTML and CSS. | **5%** |  | COMPLETED
 | Ensure the program **runs without errors** (comment out things that do not work, and explain your blockers — you can still receive partial credit). | **10%** |  | COMPLETED
 | **Commit frequently** to the git repository. | **5%** |  | COMPLETED
-| Include a **README file** that contains a description of your application. | **2%** | TODO |
+| Include a **README file** that contains a description of your application. | **2%** |  | COMPLETED
 | Level of effort displayed in **creativity, presentation, and user experience**. | **5%** |  | COMPLETED
 
 
