@@ -29,10 +29,10 @@ async function searchBreeds(input){ // this searchs through the breeds for the u
             
             //console.log("RESULT", breed);
             document.getElementById("search-results").innerHTML += `<li>${breed.name}</li>`;
-            console.log("RESULT", breed.name);        
+            //console.log("RESULT", breed.name);        
 
         }
-        console.log(breedResults);
+        //console.log(breedResults);
     }
     catch(error){
         console.log("An error has occured:", error);
@@ -78,7 +78,7 @@ function checkForVote(breed){
             initialLoad = false;
         } else {
             voteBreed(breed, 1);
-            console.log("YES");
+            //console.log("YES");
         }
     })
     document.getElementById("nav-button-no").addEventListener("click", function(){
@@ -88,7 +88,7 @@ function checkForVote(breed){
             initialLoad = false;
         } else {
             voteBreed(breed, 0);
-            console.log("NO");
+            //console.log("NO");
         }
     })
 }
@@ -96,7 +96,7 @@ function checkForVote(breed){
 
 document.getElementById("search-button").addEventListener("click", function(){
     let input = document.getElementById("search-box").value;
-    console.log(input);
+    //console.log(input);
     let inputCorrect = false;
     for(let breed of allBreeds){ //change background to user pick
         if (breed.name === input || breed.id === input || breed.alt_names === input){
@@ -105,7 +105,7 @@ document.getElementById("search-button").addEventListener("click", function(){
             if(initialLoad === true){ 
                 //this makes the user can vote initially
                 checkForVote(randomCat);
-                console.log("RANDOM")
+                //console.log("RANDOM")
                 
             }else{
                 checkForVote(breed);
@@ -115,12 +115,11 @@ document.getElementById("search-button").addEventListener("click", function(){
         }
     }
         if(inputCorrect === false){
-            console.log("HERE", input);
+            //console.log("HERE", input);
             searchBreeds(input);
         }
 })
 
-console.log(allBreeds[6]);
 
 
 if(initialLoad === true){

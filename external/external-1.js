@@ -14,7 +14,7 @@ export async function getCats(breed){
         });
         let image = await responseImage.json();
         let imageUrl = image.url;
-        console.log("External1:", imageUrl);
+        //console.log("External1:", imageUrl);
     } catch (error){
         console.log(error);
     }
