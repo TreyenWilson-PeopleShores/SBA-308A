@@ -68,9 +68,33 @@ async function voteBreed(breed, voteValue){
 
 voteBreed(allBreeds[3], 1);
 let randomCat = external2.getRandomCat(allBreeds);
-
+let initialLoad = true
 external1.getCats(randomCat);
 external3.setBackground(randomCat)
+
+function checkForVote(breed){
+    document.getElementById("nav-button-yes").addEventListener("click", function(){
+        // Checks for yes vote
+        if(initialLoad === true){
+            voteBreed(randomCat, 1);
+            initialLoad = false;
+        } else {
+            voteBreed(breed, 1);
+            console.log("YES");
+        }
+    })
+    document.getElementById("nav-button-no").addEventListener("click", function(){
+        // Checks for no vote
+        if(initialLoad === true){
+            voteBreed(randomCat, 0);
+            initialLoad = false;
+        } else {
+            voteBreed(breed, 0);
+            console.log("NO");
+        }
+    })
+}
+
 
 document.getElementById("search-button").addEventListener("click", function(){
     let input = document.getElementById("search-box").value;
@@ -80,6 +104,15 @@ document.getElementById("search-button").addEventListener("click", function(){
         if (breed.name === input || breed.id === input || breed.alt_names === input){
             external3.setBackground(breed)
             inputCorrect = true;
+            if(initialLoad === true){ 
+                //this makes the user can vote initially
+                checkForVote(randomCat);
+                console.log("RANDOM")
+                
+            }else{
+                checkForVote(breed);
+            }
+            
             break;
         }
     }
