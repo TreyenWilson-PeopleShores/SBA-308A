@@ -52,6 +52,7 @@ document.getElementById("search-button").addEventListener("click", function(){
     for(let breed of allBreeds){ //change background to user pick
         if (breed.name === input || breed.id === input || breed.alt_names === input){
             external3.setBackground(breed)
+            inputCorrect = true;
             break;
         }
     }
