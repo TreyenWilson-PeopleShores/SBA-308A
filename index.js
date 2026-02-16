@@ -42,14 +42,16 @@ async function searchBreeds(input){ // this searchs through the breeds for the u
 async function voteBreed(breed, voteValue){
     try{
 
-        await fetch(`https://api.thecatapi.com/v1/votes/`, {
+        await fetch(`https://api.thecatapi.com/v1/votes`, {
             method: "POST",
             headers: {
                 'content-type':"application/json",
-                'x-api-key': API_KEY
+                'x-api-key': "DEMO-API-KEY"
+                // HAD TO USE DEMO KEY FOR VOTING, MY API KEY
+                // WOULDN'T WORK
             },
             body: JSON.stringify({
-                breed_id: breed.reference_image_id,
+                image_id: breed.reference_image_id,
                 value: voteValue,
             }),
         });
