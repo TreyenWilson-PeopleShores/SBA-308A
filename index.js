@@ -125,4 +125,6 @@ document.getElementById("search-button").addEventListener("click", function(){
 console.log(allBreeds[6]);
 
 
-
+if(initialLoad === true){
+    checkForVote(randomCat);
+}
