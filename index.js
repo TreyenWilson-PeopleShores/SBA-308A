@@ -24,7 +24,7 @@ async function searchBreeds(input){ // this searchs through the breeds for the u
         });
         let searchResults = await searchName.json()
         let breedResults = searchResults; 
-
+        document.getElementById("search-results").innerHTML = `<ul><li>${breedResults}</li></ul>`;        
         console.log(breedResults);
     }
     catch(error){
